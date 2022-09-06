@@ -1,0 +1,38 @@
+{%extends 'pathology/html/basetemplate.html'%}
+{%load static%}
+{%block title%}
+ Our Doctors
+{%endblock%}
+
+{%block content%}
+
+<main class="mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+              <img src="{% static 'pathology/images/doctor.jpg' %}" class="img-fluid" style="height: 500px; width:800px;" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>Our Doctors</strong></h4>
+            <p class="text-muted">
+                Being a doctor in today's day and age is an act of unabated selflessness. The Hippocratic oath has become a charter of destiny and a beckoning like no other: Doctors today are required to risk their very lives to save lives each day. 
+            </p>
+            <p><strong>Get Treated By The Best!</strong></p>
+            <p class="text-muted">
+                
+Our highly-skilled doctors work across a range of services to serve the needs of our diverse patients. Being responsive and making good, transparent decisions are key principles of our Doctors. Working with our patients and their families helps achieve the best health outcomes.
+<br>Our diverse team of experienced and renouned physicians and surgeons share a common passion to prove the highest quality of care.<br>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {%endblock%}

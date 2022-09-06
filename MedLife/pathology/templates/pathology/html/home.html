@@ -1,0 +1,181 @@
+{% extends 'pathology/html/basetemplate.html' %}
+{% load static%}
+
+{% block title %}
+
+Home
+
+{%endblock%}
+
+{% block content %}
+
+<!-- carousel starts here -->
+
+<div class="container">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{%  static 'pathology/images/pic4.jpg'  %}" class="d-block w-100" alt="image" style="width: 400px;height:400px ">
+            
+          </div>
+          <div class="carousel-item">
+            <img src="{%  static 'pathology/images/pic3.jpg'  %}" class="d-block w-100" alt="image" style="width: 400px;height:400px ">
+            
+          </div>
+          <div class="carousel-item">
+            <img src="{%  static 'pathology/images/pic6.jpg'  %}" class="d-block w-100" alt="image" style="width: 400px;height:400px ">
+            
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+<!-- carousel starts here -->
+
+
+  <main class="mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section>
+        <div class="row">
+          <div class="col-md-6 gx-5 mb-4">
+            <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+              <img src="{% static 'pathology/images/pic1.jpg' %}" class="img-fluid" style="height: 280px; width:500px;" />
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 gx-5 mb-4">
+            <h4><strong>Our Speciality</strong></h4>
+            <p class="text-muted">
+                At Healthcare Pathology, we envision a world where results are simple, media and services are cost-effective 
+                and performance-oriented, 
+                but most importantly a world where accountability, transparency, and confidence in media exist.
+            </p>
+            <p><strong>Why you should choose us ?</strong></p>
+            <p class="text-muted">
+                Online lab test bookings allow you to book the specific test you need and have your samples collected from the comfort of your home. 
+                This procedure is conducted by our trained professionals who are known as phlebotomists, after which your sample reports can also be accessed online.
+                Our professionals are skilled with their work and make the process very smooth.
+                Our lab is now trying to provide the facility of home collection of samples to make it safe and easy for the people.
+                The risk of exposure to crowds can be minimised to a great extent if you choose us.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 style="text-decoration: underline ; color: darkmagenta; text-shadow:  4px 4px 4px plum;">Customer Speak </h3>
+        <p style="margin-top:20px ;">Customers Speak Customer satisfaction is our prime focus. We would like to hear your comments
+             about our service.
+        </p>
+
+      </section>
+
+      <!-- Card of customer speak -->
+      <div class="container mt-5 mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card p-3 mb-2" style="height:18rem ; box-shadow: 8px 10px 8px plum;">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="icon"> <i class="fas fa-comment-dots"></i> </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Ramesh Chandra</h6> <span><i>Gomti Nagar, Lucknow</i></span>
+                            </div>
+                        </div>
+                        <div class="badge"> <span><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            </span> </div>
+                    </div>
+                    <div class="mt-5">
+                        <h6 style="font-family: Verdana, sans-serif;" >If you want a full body health report that won't cost a bomb but give accurate results, try Healthcare Pathology! 
+                            They have done a great job on this one!</h6>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 mb-2" style="height:18rem ;box-shadow: 8px 10px 8px plum;">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="icon"> <i class="fas fa-comment-dots"></i> </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Ranjana Singh</h6> <span><i>Indira Nagar, Lucknow</i></span>
+                            </div>
+                        </div>
+                        <div class="badge"> <span><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span></span> </div>
+                    </div>
+                    <div class="mt-5">
+                        <h6 style="font-family: Verdana, sans-serif;">This is the best lab test experience ever! And that too at a very reasonable rate!
+                             I highly recommend Healthcare Pathology. Value for money!</h6>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3 mb-2" style="height:18rem ;box-shadow: 8px 10px 8px plum;">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="icon"><i class="fas fa-comment-dots"></i> </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Veena Gupta</h6> <span><i>Mahanagar, Lucknow</i></span>
+                            </div>
+                        </div>
+                        <div class="badge"> <span><span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span></span> </div>
+                    </div>
+                    <div class="mt-5">
+                        <h6 style="font-family: Verdana, sans-serif;">I've done lab tests before. The process seemed so off-putting. 
+                            But with Healthcare Pathology it has been so easy and professional! 
+                            The phlebotomist took great care when drawing the blood etc. He was very reassuring!</h6>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+      <!-- customer speak ends here -->
+
+
+
+<h4 style="text-decoration:underline; color: brown; margin-left: 70px; ">Terms & Conditions:</h4>
+<ul style="margin-right:70px ;margin-left: 60px; font-size: 13px;"><li>By submitting the form above, you are allowing Healthians Health Advisors to call you back at your convenient time.</li>
+    <li>Our Health advisor and Medical team will be involved to guide you in the complete cycle of the testing process and will facilitate the diagnosis process for prevention of any disease.</li>
+    <li>Your health vitals and history will be taken for pre-diagnosis and for suggesting the relevant tests through Health Karma or you can also share your prescription with our medical team.</li>
+    <li>Once you confirm your booking, a trained Phlebotomists (Sample Collector) will be assigned to visit you on your chosen time and pickup address and for collection of sample. Phlebotomist may also take other vitals if suggested in the pre diagnosis.</li>
+    <li>Your sample will then be transported to the nearest collection hub maintaining the integrity of the sample and will be centrifuged before sending to the lab for processing.</li>
+    <li>Once the results are processed in the Healthians / Partner Lab, medical team at Healthians will verify the results and a smart report including historical trends and vital’s information submitted by you along with simple interpretations will be shared with you.</li>
+    <li>You will also be offered a post report counselling by our Doctors as a part of the healthcare service offered to you.</li>
+    <li>Healthians offers 24*7 customer support to resolve any of your concern during and after the entire diagnosis process.</li>
+    <li>Dear Customer, we are pleased on your signup with Healthcare Pathology today. By entering your phone number you agree that we may send you text notifications, text marketing offers and health checkup reminders. By signing up you provide your consent to receive communication from Healthians.</li>
+</ul>
+
+
+{%endblock%}

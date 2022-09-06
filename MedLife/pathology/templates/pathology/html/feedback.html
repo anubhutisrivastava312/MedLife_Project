@@ -1,0 +1,81 @@
+{%extends 'pathology/html/basetemplate.html' %}
+{%block title%}
+Feedback
+{%endblock%}
+
+{%block content%}
+<!--form starts here-->
+     <!--for messages-->
+     {% if messages %}
+     {% for m in messages %}
+       
+     <!-- <h2> {{m}}</h2> -->
+     <div class="alert alert-{{m.tags}} alert-dismissible fade show" role="alert">
+         <strong>{{m}}</strong> 
+         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+       </div>
+ 
+     {% endfor %}
+     {%endif%}
+ 
+    
+    <form method="POST" action="/feedback/" class="needs-validation" novalidate>
+      {% csrf_token %}
+
+        <h2 style="color:crimson;margin-top: 5%; text-align: center;"> Your Feedback is Valuable For Us</h2>
+
+        <div class="w-50 p3" style="background-color:beige; margin-left:24%;margin-top: 5%;">
+        
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Name</label>
+          <input type="text" required class="form-control" name="txtname" placeholder="Your name">
+          <div class="invalid-feedback">
+            Please provide a username.
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email</label>
+            <input type="text" required class="form-control" name="txtemail" placeholder="Your Email">
+            <div class="invalid-feedback">
+              Please provide an email.
+            </div>
+          </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Feedback</label>
+            <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3" required name="txtfeedback"></textarea>
+            <div class="invalid-feedback">
+              you can't leave this field empty.
+            </div>
+            
+          </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select Ratings</label>
+          <select required class="form-control" id="exampleFormControlSelect1" name="cmbrating">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          <div class="invalid-feedback">
+            Please provide a username.
+          </div>
+        </div>
+         <div class="form-group">
+            <input type="submit" name="btnSubmit" class="btnContact" value="Submit" />
+          </div>
+    </div>
+
+      </form>
+    
+      
+      
+      <!--form ends here-->
+
+
+
+
+
+{%endblock%}

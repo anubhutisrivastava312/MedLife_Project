@@ -1,0 +1,49 @@
+{%extends 'pathology/html/basetemplate.html'%}
+{% load static %}
+
+{%block title%}
+Health Campaign
+{%endblock%}
+
+{% block style %}
+  
+  body {
+    background: linear-gradient(to right,rgb(243, 168, 160),antiquewhite) !important;
+  }
+  
+  
+  
+{%endblock%}
+
+
+{%block content%}
+
+<div class="container">
+    <div class="row">
+        {% for h in hc_key %}  
+      <div class="col-4">
+  
+  
+        <div class="card" style="width: 20rem; margin-top: 50px; height: 32rem;">
+          <img src="/media/{{h.Event_pic}}" class="card-img-top" alt="..." style="width:20rem; height: 200px; ">
+          <div class="card-body" >
+            <h5 class="card-title" style="color: rgb(253, 91, 37); text-align: center ;">{{h.Campaign_Name}}</h5>
+            <h5 class="card-title" style="font-size:18px ;">Organizer: {{h.Organizer_Name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{h.Description}}</h6>
+            <h5 class="card-title" style="font-size:18px ;color: black;"><i>Venue: {{h.Venue}}</i></h5>
+
+  
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+  
+      </div>
+  
+      {%endfor%}
+  
+    </div>
+  
+  </div>
+  
+
+{%endblock%}

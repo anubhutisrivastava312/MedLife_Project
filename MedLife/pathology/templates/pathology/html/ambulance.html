@@ -1,0 +1,70 @@
+{% extends 'pathology/html/basetemplate.html' %}
+{% load static%}
+
+{% block title %}
+
+Home
+
+{%endblock%}
+
+{% block content %}
+
+<style>
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    
+    .bottom-left {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+    }
+    
+    .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+    
+    .top-right {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+    }
+    
+    .bottom-right {
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+    }
+    
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2 style="text-align: center; color:brown">OUR AMBULANCE SERVICES AT YOUR ONE RING</h2>
+    <p style="text-align:center; color:crimson">Your Health Is Our Concern... </p>
+    
+    <div class="container">
+      <img src="{%static 'pathology/images/ambulance.jpg' %}" alt="Snow" style="width:100%;">
+      <!-- <div class="bottom-left">Bottom Left</div> -->
+      <!-- <div class="top-left">Top Left</div> -->
+      <div class="icon"><i class="fa-solid fa-square-phone"></i></div>
+      <div class="top-right" style="font-weight:bolder;color:darkred;font-size:30px;">
+        
+        call us at toll free no: 108
+
+    </div>
+
+      <!-- <div class="bottom-right">Bottom Right</div> -->
+      <div class="centered" style="font-weight:bolder;color:red;font-size:70px;">24Hrs EMERGENCY SERVICES</div>
+    </div>
+{%endblock%}    

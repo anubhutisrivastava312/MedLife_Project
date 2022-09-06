@@ -1,0 +1,39 @@
+{%extends 'pathology/html/basetemplate.html'%}
+{%block title%}
+Job Vaccancies
+{%endblock%}
+
+{%block content%}
+<h3 style="color:rgb(187, 121, 121);text-align: center;">Mail your CV at healthcarepathology@gmail.com</h3>
+<div class="container" style="margin-top:30px;">
+    <div class="row">
+      {% for j in job_data %}
+       
+       <div class="col-4">
+
+        <div class="card" style="width: 18rem; background-color:lightpink">
+          <!-- <img src="/media/{{ev.event_pic}}" class="card-img-top" alt="..."> -->
+          <div class="card-body">
+            <h5 class="card-title" style="color:blueviolet">Profile: {{j.PostName}}</h5>
+            <h5 class="card-title">Seats Available: {{j.NoOfSeats}}</h5>
+            <h5 class="card-title">Last Date To Apply: {{j.Lastdatetoapply}}</h5>
+            <h5 class="card-title">Posted On: {{j.Postdate}}</h5>
+            <h5 class="card-title">Description: {{j.Description}}</h5>
+
+            
+
+            <!--           
+            <a href="{{'/job_registeration'}}" class="btn btn-primary">Apply Here</a> -->
+          </div>
+        </div>
+
+       </div>
+
+
+
+
+      {%endfor%}
+    </div>
+  </div>
+
+{%endblock%}

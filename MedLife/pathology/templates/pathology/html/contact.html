@@ -1,0 +1,87 @@
+{% extends 'pathology/html/basetemplate.html' %}
+{% load static%}
+
+{% block title %}
+
+Contact Us
+
+{%endblock%}
+
+{% block style %}
+body{background:linear-gradient(to left,rgb(250, 193, 128),pink )  !important}
+
+{%endblock%}
+
+
+{% block content %}
+
+{% if messages %}
+    {% for m in messages %}
+
+    <!-- <h2>{{m}}</h2> -->
+
+    <div class="row justify-content-center mt-9" style="margin-top: 20px;">
+      <div class="col-6">
+    <div class="alert alert-{{m.tags}} alert-dismissible fade show" role="alert">
+      <strong>{{m}}</strong> 
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+
+      {% endfor %}
+      {% endif %}
+
+      <div class="row justify-content-center mt-5">
+  <div class="col-6">
+      <form method="POST" action="/contactus/" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="w-40 p-4 " style="background-color: rgb(180, 180, 179) ; margin-top: 30px; margin-left: 15%; margin-bottom:30px ; float: left; box-shadow: 8px 8px 8px rgb(247, 245, 243); border-radius: 20px;">
+          <h6 style="color:white ;">Please fill in your details below and we will get back to you. </h6>
+
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form4Example1">Name</label>
+          <input type="text" id="form4Example1" required class="form-control" name="txtname" />
+          <div class="invalid-feedback">
+            Please provide your name.
+          </div>
+        </div>
+      
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form4Example2">Email address</label>
+          <input type="email" id="form4Example2" required class="form-control" name="txtemail" />
+          <div class="invalid-feedback">
+            Please provide your email.
+          </div>
+        </div>
+
+        <!-- Phone number -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form4Example2">Phone Number</label>
+          <input type="number" id="form4Example2" required class="form-control" name="txtphone" />
+          <div class="invalid-feedback">
+            Phone number is required.
+          </div>
+
+        </div>
+      
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="form4Example3">Your Query</label>
+          <textarea required class="form-control" id="form4Example3" rows="4" name="txtquery"></textarea>
+          <div class="invalid-feedback">
+            Query required.
+          </div>
+        </div>
+  
+      
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-block mb-4" style="margin-left: 38%; background-image: linear-gradient(to right, #d3e783 51%, #f8f8f8 100%);">Submit</button>
+      </form>
+    </div>
+</div>
+
+{%endblock%}

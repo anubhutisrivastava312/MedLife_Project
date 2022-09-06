@@ -1,0 +1,64 @@
+{%load static%}
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #d1ecff; ">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'pathology/images/favicon.png' %}" alt="..." height="36">
+        </a>
+    <a class="navbar-brand" href="#">Healthcare Pathology</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto topnav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{'/'}}" style="margin-left: 100px;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{'/health_campaign'}}">Health Campaign</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{'/doctors'}}">Our Doctors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{'/test_details'}}">Test Details</a>
+            </li>
+            <li class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Services
+                
+                </a>
+                
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                <li><a class="dropdown-item" href="{{'/ambulance'}}"> Ambulance</a></li>
+                 <li><a class="dropdown-item" href="{{'/cafeteria'}}">Cafeteria</a></li>
+                
+                
+                <li><a class="dropdown-item" href="{{'/restroom'}}">Rest Room</a></li>
+                
+                
+                </ul>
+                
+                </li>
+          
+            <li class="nav-item">
+                <a class="nav-link" href="{{'/feedback'}}">Feedback</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{'/contactus'}}">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{'/job'}}">Job</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{'/appointment'}}">Appointment</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal">Sign In</a>                  
+            </li> -->
+            <!-- <li class="nav-item">
+                <a class="nav-link btn btn-danger text-white" type="button" href="{{'/job_registeration'}}" data-toggle="modal" data-target="#myModal">Apply For Job</a>
+            </li> -->
+        </ul>
+    </div>
+    </nav>
